@@ -1,0 +1,20 @@
+{
+  "name": "universal-lever",
+  "interface": {
+    "displayName": "Universal Lever"
+  },
+  "plugins": [
+    {
+      "name": "universal-lever",
+      "source": {
+        "source": "local",
+        "path": "./plugins/universal-lever"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

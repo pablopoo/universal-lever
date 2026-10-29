@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "universal-lever",
+  "version": "0.1.0",
+  "description": "Evidence-driven local Codex workflows with one coordinating skill and optional native subagents.",
+  "author": {
+    "name": "Pablo Poo"
+  },
+  "repository": "https://github.com/pablopoo/universal-lever",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Universal Lever",
+        "shortDescription": "Measure, experiment, deliver, and review with evidence.",
+        "developerName": "Pablo Poo",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Use Universal Lever to plan, implement, and validate this task locally."
+        ]
+      },
+      "requires_local_executor": true
+    }
+  }
+}
