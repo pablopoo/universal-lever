@@ -70,7 +70,7 @@ This route requires workspace import permissions; it is separate from a personal
 
 That link opens the directory; it does **not** add this repository or install Universal Lever. As of October 29, 2026, the official guides above do not document a repository-specific web/deep link for importing and installing an arbitrary Git marketplace in one click. Use the CLI source registration or workspace import steps above. A published directory listing or an authorized workspace share link is a separate distribution route; neither is created by making the GitHub repository public.
 
-The catalog and plugin repositories are currently private, so Git installation requires authenticated access to the catalog and each plugin you install. Making the catalog public does not grant access to private plugin repositories. The same source URLs work if the repositories become public. Publishing them on GitHub does not automatically list the plugins in a public plugin directory.
+The catalog and both plugin repositories are public. Git installation can read these sources without GitHub credentials. Publishing them on GitHub does not automatically list the plugins in a public plugin directory.
 
 Plugin installs use a cached snapshot. If you edit the local plugin files, refresh or reinstall the plugin to pick up those changes.
 
