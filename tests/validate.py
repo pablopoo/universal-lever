@@ -1,5 +1,6 @@
 """Structural checks only; these do not prove model compliance."""
 from pathlib import Path
+import hashlib
 import json
 import re
 
@@ -28,6 +29,15 @@ assert manifest['extensions']['com.openai']['interface'] == compatibility['inter
 assert manifest['extensions']['com.openai']['requires_local_executor'] is True
 assert compatibility['requires_local_executor'] is True
 assert (plugin / 'LICENSE').read_bytes() == (root / 'LICENSE').read_bytes()
+# The license is an unmodified copy from the pinned github/lever revision.
+assert hashlib.sha256((plugin / 'LICENSE').read_bytes()).hexdigest() == '2480c000846104dc7525e89e131cb14a9c2f67b0b2b74dd6a035e75df3adec56'
+notices = plugin / 'THIRD_PARTY_NOTICES.md'
+assert notices.is_file(), 'The installed package must retain upstream notices'
+assert 'f859d0aa2be96981157ee0480655c84877e3cd98' in notices.read_text()
+assert 'Copyright (c) 2026 GitHub, Inc.' in notices.read_text()
+for target in re.findall(r'\[[^\]]+\]\(([^)]+)\)', notices.read_text()):
+    if not target.startswith(('https://', '#')):
+        assert (notices.parent / target).is_file(), target
 skill = plugin / 'skills/universal-lever'
 assert list(plugin.glob('skills/*/SKILL.md')) == [skill / 'SKILL.md']
 entry = (skill / 'SKILL.md').read_text()

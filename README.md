@@ -51,9 +51,7 @@ For a personal local installation:
 
 This package requires local execution. A regular web chat cannot run its local development workflows. Marketplace controls and labels can vary by app version, account, and workspace. See the [official desktop marketplace guide](https://developers.openai.com/plugins/build/plugins#build-your-own-curated-plugin-list) and [ChatGPT Help: installing and using plugins](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt).
 
-![Official ChatGPT Help example of a plugin installation card with an Install button](https://images.ctfassets.net/j22is2dtoxu1/plugins_img_099048c330d44aa985aa1ac0c02df953/3bfa18e686e72533f19d8102af325e36/plugin-installation-card.png?fm=webp&q=80&w=1344)
-
-*Installation-card reference from [OpenAI Help](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt#create-plugins). This shows another plugin as an example; it is not a screenshot of Universal Lever or the marketplace-source picker.*
+For a visual reference, see the installation-card example in [OpenAI Help](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt#create-plugins). The screenshot stays on the official help site; it is not reproduced or included under this project's MIT license.
 
 ### ChatGPT workspace import from the web
 
@@ -182,7 +180,13 @@ These checks cover package structure and local Git isolation/integration scenari
 
 Universal Lever is an independent development with a universal direction. It adapts selected concepts from **[github/lever](https://github.com/github/lever)**, originally a Copilot plugin for coding-agent feedback loops. This project is not endorsed by GitHub.
 
-- Plugin version: `0.1.0`.
+- Plugin version: `0.1.1`.
 - Upstream revision: [`f859d0aa2be96981157ee0480655c84877e3cd98`](https://github.com/github/lever/tree/f859d0aa2be96981157ee0480655c84877e3cd98).
 - The adaptation carries forward concepts such as executable feedback loops, controlled experiments, negative-result records, outcome-based briefs, evidence states, and bounded autonomy, packaged as a Codex plugin with one coordinator skill.
 - Distributed under the [MIT license](LICENSE), retaining the original **Copyright (c) 2026 GitHub, Inc.** notice.
+
+The installed package includes its own [LICENSE](plugins/universal-lever/LICENSE)
+and [third-party notices](plugins/universal-lever/THIRD_PARTY_NOTICES.md), so its
+upstream attribution remains available when installed separately from this
+repository. External documentation, screenshots and linked services retain
+their owners' rights; links do not extend this project's MIT grant to them.
