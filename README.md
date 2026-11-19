@@ -180,8 +180,9 @@ These checks cover package structure and local Git isolation/integration scenari
 
 Universal Lever is an independent development with a universal direction. It adapts selected concepts from **[github/lever](https://github.com/github/lever)**, originally a Copilot plugin for coding-agent feedback loops. This project is not endorsed by GitHub.
 
-- Plugin version: `0.1.1`.
-- Upstream revision: [`f859d0aa2be96981157ee0480655c84877e3cd98`](https://github.com/github/lever/tree/f859d0aa2be96981157ee0480655c84877e3cd98).
+- Plugin version: `0.1.2`.
+- Original upstream base: [`f859d0aa2be96981157ee0480655c84877e3cd98`](https://github.com/github/lever/tree/f859d0aa2be96981157ee0480655c84877e3cd98).
+- Latest upstream review: [`a0acf31d730d90248c30237225442bdd991f17b2`](https://github.com/github/lever/tree/a0acf31d730d90248c30237225442bdd991f17b2) (November 19, 2026). The four commits since the original base only change the copyright notice and Copilot installation links. Version `0.1.2` records the current copyright notice in the installed third-party notices while preserving the original MIT license. Workflow instructions are unchanged; the Copilot-only link does not apply to Codex.
 - The adaptation carries forward concepts such as executable feedback loops, controlled experiments, negative-result records, outcome-based briefs, evidence states, and bounded autonomy, packaged as a Codex plugin with one coordinator skill.
 - Distributed under the [MIT license](LICENSE), retaining the original **Copyright (c) 2026 GitHub, Inc.** notice.
 
